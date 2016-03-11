@@ -13,29 +13,30 @@
 -(instancetype) init{
   if( self = [super init]){
     
-    _rates = [NSMutableDictionary dictionaryWithDictionary: @{@0: @200.00,
-               @1: @380.50,
-               @2: @405.99,
-               @3: @400.00
+    _rates = [NSMutableDictionary dictionaryWithDictionary: @{@"Family": @200.00,
+               @"Patent": @380.50,
+               @"Criminal": @405.99,
+               @"Corporate": @400.00
                } ];
+    
   }
   return self;
 }
 
 
-+(NSNumber *)convertLawSpecialtyToNum:(LawSpecialty)specialty{
++(NSString *)convertLawSpecialtyToNum:(LawSpecialty)specialty{
   switch (specialty) {
     case Family:
-      return [NSNumber numberWithInt:0];
+      return @"Family";
       break;
     case Patent:
-      return [NSNumber numberWithInt:1];
+      return @"Patent";
       break;
     case Criminal:
-      return [NSNumber numberWithInt:2];
+      return @"Criminal";
       break;
     case Corporate:
-      return [NSNumber numberWithInt:3];
+      return @"Corporate";
       break;
       
     default:

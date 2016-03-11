@@ -32,8 +32,7 @@
 }
 
 -(NSNumber *)getRate:(LawSpecialty)specialty{
-  NSNumber *key = [[NSNumber alloc] init];
-  key = [Practice convertLawSpecialtyToNum:specialty];
+  NSString *key = [Practice convertLawSpecialtyToNum:specialty];
   NSNumber *rate = self.practice.rates[key];
   
   return rate;

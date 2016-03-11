@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef enum LawSpecialty: NSInteger{
   Family, 
   Patent,
   Criminal,
@@ -23,5 +23,5 @@ typedef enum {
 
 -(instancetype) init;
 
-+(NSNumber *)convertLawSpecialtyToNum:(LawSpecialty)specialty;
++(NSString *)convertLawSpecialtyToNum:(LawSpecialty)specialty;
 @end

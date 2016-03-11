@@ -25,9 +25,9 @@
 @property (nonatomic, strong) Practice *practice;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) LawSpecialty specialty;
-@property (nonatomic, copy) NSNumber *rate;
+@property (nonatomic, copy)   NSNumber *rate;
 @property (nonatomic, strong) NSMutableSet *clientList;
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) id <BasicLawyerStuff> delegate;
 
 -(instancetype)initWithPractice:(Practice*) practice
                        withName:(NSString *)name

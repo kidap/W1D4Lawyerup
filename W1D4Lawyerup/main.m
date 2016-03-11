@@ -32,12 +32,13 @@ int main(int argc, const char * argv[]) {
     
     //Initialize 2 Clients objects with a name, description of problem, and specialization required
     Client *apple = [[Client alloc] initWithName:@"Apple" withProblem:@"death" withSpecialty:Criminal];
-    
     Client *samsung = [[Client alloc] initWithName:@"Samsung" withProblem:@"Patent" withSpecialty:Corporate];
     
+    //Add clients to lawyers
     [harvey addClient:apple];
     [mike addClient:samsung];
     
+    //Check charges
     NSLog(@"%@ will charge %@ $%d for %@ cases.",harvey.name, apple.name, [harvey getPayableAmountForClient:apple], apple.problem);
     NSLog(@"%@ will charge %@ $%d for %@ cases.",mike.name, samsung.name, [mike getPayableAmountForClient:samsung], samsung.problem);
     
